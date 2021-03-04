@@ -1,0 +1,5 @@
+#<Name> <health> <dmg> <level>... more stuff later
+rat 2 1 400
+bat 35 3 300
+Nate 50 1 300
+Fool 20 1 1000

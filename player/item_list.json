@@ -1,0 +1,37 @@
+{
+ "0": {
+  "name": "apple",
+  "icon": "\ud83c\udf4e",
+  "usable": 1,
+  "thumbnail": "https://bigmemes.funnyjunk.com/pictures/Sensed+telling+bored+coyote_850f2b_8246124.jpg",
+  "description": "idk bish"
+ },
+ "1": {
+  "name": "blueberries",
+  "icon": "\ud83e\uded0",
+  "usable": 1,
+  "thumbnail": "https://cdn.discordapp.com/attachments/694352452446584975/790037826917629982/unknown.png",
+  "description": ":)"
+ },
+ "2": {
+  "name": "knife",
+  "icon": "<:ray_knife:791526785601896448>",
+  "usable": 1,
+  "thumbnail": "https://cdn.discordapp.com/attachments/694352452446584975/790037826917629982/unknown.png",
+  "description": "straight from hell"
+ },
+ "3": {
+  "name": "base item",
+  "icon": ":question:",
+  "usable": 0,
+  "thumbnail": "https://cdn.discordapp.com/attachments/694352452446584975/790037826917629982/unknown.png",
+  "description": ":)"
+ },
+ "4": {
+  "name": "base item",
+  "icon": ":question:",
+  "usable": 0,
+  "thumbnail": "https://cdn.discordapp.com/attachments/694352452446584975/790037826917629982/unknown.png",
+  "description": ":)"
+ }
+}

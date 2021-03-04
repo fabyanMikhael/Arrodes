@@ -1,0 +1,5 @@
+asyncio
+Discord
+pymongo
+dnspython
+motor
