@@ -17,7 +17,6 @@ async def save_players():
     global cache
 
     if len(cache) <= 0:
-        # print("no cached data found!")
         return
 
     for index in cache:

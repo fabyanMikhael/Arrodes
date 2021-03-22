@@ -56,7 +56,7 @@ class pvp(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def testing(self, ctx):
-        ''': wit da shi'''
+        ''': test command'''
 
         choice = random.choice(enemy_presets)
         enemy = Entity(choice[0])
