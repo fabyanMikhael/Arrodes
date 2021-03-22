@@ -91,10 +91,11 @@ class profile(commands.Cog):
         items = player.inventory
         text = "⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻\n"
         for item in items:
-            text += f"**• {item.name}** - `x{item.amount}`  {item.icon}" + "\n"
+            text += f"**•** [{item.name}](https://www.google.com/) - `x{item.amount}`  {item.icon}" + "\n"
         text += "⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻"
         embed=discord.Embed(title="<a:purple_flame:791527934057775164>[Inventory]<a:purple_flame:791527934057775164>", color=0xa43232)
         embed.add_field(name="Items: ", value=text)
+        embed.set_footer(text="(1/1) pages")
         await ctx.channel.send(embed=embed)
 
     @commands.command(aliases=["Info", "information"])

@@ -1,19 +1,19 @@
 import asyncio, discord
 
 async def move_0(self, move, player_number, game):
-    await game.players[int(not player_number)].take_damage(self.stats['Strength'], game, int(not player_number), f"**{self.name}** used **[Strike]** 🔻{self.stats['Strength']} Damage!")
+    await game.players[int(not player_number)].take_damage(self.stats['Strength'], game, int(not player_number), f"[{self.name}](https://www.google.com/) used [Strike](https://www.google.com/) 🔻{self.stats['Strength']} Damage!")
 
 async def move_1(self, move, player_number, game):
-    await game.players[int(not player_number)].take_damage(self.stats['Strength'] * 2, game, int(not player_number), f"**{self.name}** used **[Fire Ball]** 🔻{self.stats['Strength'] * 2} Damage!")
+    await game.players[int(not player_number)].take_damage(self.stats['Strength'] * 2, game, int(not player_number), f"[{self.name}](https://www.google.com/) used [Fire Ball](https://www.google.com/) 🔻{self.stats['Strength'] * 2} Damage!")
 
 async def move_2(self, move, player_number, game):
-    await game.players[int(not player_number)].take_damage(0, game, int(not player_number), f"**{self.name}** has decided to skip their turn...")
+    await game.players[int(not player_number)].take_damage(0, game, int(not player_number), f"[{self.name}](https://www.google.com/) has decided to [skip](https://www.google.com/) their turn...")
 
 async def move_999(self, move, player_number, game):
-    await game.players[int(not player_number)].take_damage(self.stats['Strength'] * 10000, game, int(not player_number), f"**{self.name}** used **[Momo Knife]** 🔻{self.stats['Strength'] * 10000} Damage!")
+    await game.players[int(not player_number)].take_damage(self.stats['Strength'] * 10000, game, int(not player_number), f"[{self.name}](https://www.google.com/) used [Momo's Knife](https://www.google.com/) 🔻{self.stats['Strength'] * 10000} Damage!")
 
 async def move_998(self, move, player_number, game):
-    await game.players[int(player_number)].take_damage(10, game, player_number, f"**{self.name}** used **[Self Harm]** 🔻10 Damage!")
+    await game.players[int(player_number)].take_damage(10, game, player_number, f"[{self.name}](https://www.google.com/) [Self Harm](https://www.google.com/) 🔻10 Damage!")
 
 async def move_997(self, move, player_number, game):
     temp_health = game.players[0].health
@@ -31,7 +31,7 @@ async def move_997(self, move, player_number, game):
     game.players[1].dmg = temp_dmg
     game.players[1].equipped_moves = temp_moves
 
-    await game.players[int(not player_number)].take_damage(0, game, int(not player_number), f"**{self.name}** used **[Swap]** Health, Damage, and moves been swapped!")
+    await game.players[int(not player_number)].take_damage(0, game, int(not player_number), f"[{self.name}](https://www.google.com/) used [Swap](https://www.google.com/) Health, Damage, and moves been swapped!")
     await asyncio.sleep(1.5)
 
 async def move_996(self, move, player_number, game):
@@ -40,7 +40,7 @@ async def move_996(self, move, player_number, game):
         
     embed.set_author(name=f"[Fight] - Ended") 
         
-    embed.add_field(name="<:blank:794678298026180608>",value=f"**[{game.players[player_number].name}]** has fled!", inline=False)
+    embed.add_field(name="<:blank:794678298026180608>",value=f"[{game.players[player_number].name}](https://www.google.com/) has fled!", inline=False)
     
     await game.message.clear_reactions()
         

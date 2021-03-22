@@ -86,7 +86,7 @@ class Game():
         self.message = msg
         await self.players[0].prepare(0,self)
         games[self.id] = self
-        await asyncio.sleep(0.2)
+        #await asyncio.sleep(0.2)
 
 
 
@@ -113,7 +113,7 @@ class Game():
             self.turn = int(not self.turn)
 
 
-            await asyncio.sleep(0.3)
+            #await asyncio.sleep(0.3)
             await self.players[self.turn].prepare(self.turn, self)
         
             if await self.check_win_condition(): return
@@ -225,7 +225,7 @@ class Game():
         await self.message.edit(embed=embed) 
 
     async def Death(self, channel, killer, victim):
-        await asyncio.sleep(2)
+        await asyncio.sleep(0.5)
         embed=discord.Embed(title="<a:dark_red_flame:791084503317741589>Battle Results<a:dark_red_flame:791084503317741589>", color=0x23162a)
         
         embed.set_author(name=f"[Fight] - Ended") 
