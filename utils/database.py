@@ -31,9 +31,7 @@ async def save_players():
 
 
 async def load_player(id):
-    print("\nPOINT 1: ", id)
     if str(id) in players:
-        print("\nPOINT 2: ", id)
         return players[str(id)]
     if await mongodb_player_data.exists(id):
         player_data = await mongodb_player_data.get(id)
@@ -50,5 +48,4 @@ async def load_player(id):
             misc=player_data["misc"]
             )
         return player
-    print("\nPOINT 3: ", id)
     return Player(id=id)

@@ -25,7 +25,7 @@ class pvp(commands.Cog):
 
     @commands.command()
     async def attack(self, ctx, victim: discord.Member):
-        ''': wit da shi'''
+        ''': Attack a player with -attack @player'''
         #human = Entity(10000, str(victim.name), dmg=100)
         player1 = await database.load_player(ctx.author.id)
         player1.name = ctx.author.name
@@ -39,7 +39,7 @@ class pvp(commands.Cog):
 
     @commands.command()
     async def fight(self, ctx):
-        ''': wit da shi'''
+        ''': fight a random enemy with -fight'''
 
         choice = random.choice(enemy_presets)
         enemy = Entity(choice[0])

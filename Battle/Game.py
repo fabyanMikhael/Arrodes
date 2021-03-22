@@ -50,9 +50,11 @@ class Game():
     def __init__(self, Player1, Player2, channel):
         Player1.health = Player1.stats['Health']
         Player1.energy = Player1.max_energy
-        
+        Player1.in_game = True
+
         Player2.health = Player2.stats['Health']
         Player2.energy = Player2.max_energy
+        Player2.in_game = True
 
         self.players = [Player1, Player2]
         self.turn = 0
@@ -240,5 +242,9 @@ class Game():
 
     async def End_Game(self):
         self.has_ended = True
+
+        for p in self.players:
+            p.in_game = False
+
         games.pop(self.id, None)
         return

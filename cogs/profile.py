@@ -123,7 +123,11 @@ class profile(commands.Cog):
 
     @commands.command(aliases=["Upgrade", "up"])
     async def upgrade(self, ctx, *, content: commands.clean_content=None):
-        player = await database.load_player(ctx.author.id)
+        player : Player = await database.load_player(ctx.author.id)
+
+        if player.in_game:
+            await ctx.message.channel.send(f"Cannot upgrade because you are in a game right now.")
+            return
 
         if content == None:
             await ctx.message.channel.send(f"-upgrade <stat> <# of points> . **Available Points:** {player.misc['Upgrade Points']}  <:plus:795070844745154590>")

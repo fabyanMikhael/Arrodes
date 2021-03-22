@@ -15,6 +15,7 @@ class Player(Entity):
         self.balance = balance
         self.misc = misc.copy()
         self.equipped_items = self.inventory
+        self.in_game = False
         players[str(self.id)] = self
         print("Player creating: ",str(self.id))
 
