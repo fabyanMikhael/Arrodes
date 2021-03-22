@@ -187,7 +187,7 @@ class Game():
         return False
 
     async def updateEmbed(self, damage_1=0, damage_2=0, health_1=10, health_2=10, move=None, extra_info=None, turn=None):
-        print("move: ", move)
+        #print("move: ", move)
         healthbar_1 = GetHealthBar(damage_1, health_1)
         healthbar_2 = GetHealthBar(damage_2, health_2)
         if turn == None:

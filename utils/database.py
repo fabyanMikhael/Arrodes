@@ -9,7 +9,7 @@ mongodb_player_data = PlayerDB("Discord-Bot", "Players")
 
 def save_player(player):
     if isinstance(player, Player):
-        print("saved")
+        #print("saved")
         cache[player.id] = player.to_dictionary()
         
 
@@ -25,7 +25,7 @@ async def save_players():
             await mongodb_player_data.update(player_data["_id"], player_data)
         else : 
             await mongodb_player_data.add(player_data["_id"], player_data)
-    print(f"# of cached player data: {len(cache)}")
+    #print(f"# of cached player data: {len(cache)}")
     cache.clear()
 
 
@@ -34,7 +34,7 @@ async def load_player(id):
         return players[str(id)]
     if await mongodb_player_data.exists(id):
         player_data = await mongodb_player_data.get(id)
-        print("\nPlayer from database: ",player_data)
+        #print("\nPlayer from database: ",player_data)
         player = Player(
             id=player_data["_id"],
             name=player_data["name"],
