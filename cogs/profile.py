@@ -118,7 +118,7 @@ class profile(commands.Cog):
         text = "⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻\n"+ item_info["description"] +"\n⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻"
         embed=discord.Embed(title=f"{item_info['icon']}**[{item_info['name']}]**{item_info['icon']}", color=0xa43232)
         embed.add_field(name="Description: ", value=text)
-        embed.set_image(url=item_info["thumbnail"])
+        embed.set_thumbnail(url=item_info["thumbnail"])
         await ctx.channel.send(embed=embed)
 
     @commands.command(aliases=["Upgrade", "up"])

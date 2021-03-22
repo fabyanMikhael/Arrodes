@@ -37,6 +37,7 @@ class item():
 
 
     #item use-functions. in the format of "use_{item name}"
+    #
 
     def use_apple(self, player, game, count=1):
         self.__heal__(player,amount=2)
